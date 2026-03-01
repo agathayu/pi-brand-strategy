@@ -698,6 +698,87 @@
     box-shadow: 0 20px 56px rgba(0,0,0,0.3);
   }
 
+  /* ── Mobile ─────────────────────────────────────────────────── */
+  @media (max-width: 600px) {
+
+    .page {
+      padding: 40px 20px;
+    }
+
+    /* Header — stack vertically */
+    .header {
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    .header-right { text-align: left; }
+
+    /* Typography */
+    .pull-quote { font-size: 20px; }
+    .body-text { max-width: 100%; }
+
+    /* Cards — single column */
+    .cards { grid-template-columns: 1fr; }
+
+    /* Compare — single column */
+    .compare { grid-template-columns: 1fr; gap: 16px; }
+
+    /* Layers — stack name + desc */
+    .layer { grid-template-columns: 1fr; gap: 6px; }
+
+    /* Tagline */
+    .tagline-block { padding: 28px 20px; }
+
+    /* Footer — stack */
+    .footer { flex-direction: column; gap: 6px; }
+
+    /* Merch pile — 2×2 grid instead of absolute scatter */
+    .merch-pile-wrap {
+      position: static;
+      width: 100%;
+      margin-left: 0;
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 28px;
+      margin-bottom: 28px;
+    }
+    .merch-pile-wrap img {
+      position: static !important;
+      width: 100% !important;
+      height: 140px;
+      object-fit: cover;
+      transform: none !important;
+    }
+
+    /* Wonder collage — 3-column grid */
+    .wonder-collage {
+      position: static;
+      width: 100%;
+      margin-left: 0;
+      height: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 6px;
+      margin-top: 24px;
+    }
+    .wc-item {
+      position: static !important;
+      width: 100% !important;
+      height: 110px !important;
+      transform: none !important;
+    }
+
+    /* Charts — stack vertically */
+    .charts-row { flex-direction: column; gap: 36px; }
+    .chart-legend-box { flex-direction: column; gap: 6px; width: 100%; }
+    .chart-inner { height: 160px; }
+
+    /* Video — keep full width but tighter margins */
+    .section-video { margin: 20px 0 28px; }
+  }
+
   /* Lightbox */
   .lightbox {
     display: none;
